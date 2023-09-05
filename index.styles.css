@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;500;600;800&display=swap');
+:root {
+    --black-primary: #020617;
+    --green-primary: #16a34a;
+    --primary-text: white;
+    --secondary-text: #9ca3af;
+    --border-light: #6b7280;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+html {
+    padding: 0;
+}
+
+body {
+    background-color: var(--black-primary);
+    background-image: linear-gradient(
+        45deg,
+        var(--black-primary) 65%,
+        #1e293b 100%
+    );
+    background-repeat: round;
+    background-attachment: fixed;
+    color: var(--primary-text);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+    border: solid 1px;
+    border-radius: 2rem;
+    padding-block: 1rem;
+    cursor: pointer;
+}
+
+.btn-green {
+    background-color: #16a34a;
+    color: var(--primary-text);
+    border-color: var(--green-primary);
+}
+
+.btn-green:hover {
+    box-shadow: 0 0 30px 3px var(--green-primary);
+    border-color: var(--green-primary);
+}
+
+.btn-transparent {
+    background-color: var(--black-primary);
+    color: var(--primary-text);
+}
+
+.btn-nav {
+    padding: 0.4rem 1.8rem;
+    color: var(--secondary-text);
+    border-color: var(--border-light);
+    cursor: default;
+}
+
+.btn-disabled {
+    background-color: #6b7280;
+    border-color: #6b7280;
+}
+
+.btn-disabled:hover {
+    box-shadow: none;
+    border-color: inherit;
+    cursor: not-allowed;
+}
+
+.main {
+    padding: 0.5rem;
+}
+
+.side-bar {
+    /* border: solid 1px var(--green-primary); */
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    position: static;
+    width: 80%;
+    margin: auto;
+    margin-block: 2rem 3rem;
+    padding-bottom: 0.1rem;
+    box-shadow: rgba(40, 97, 230, 0.1) 0px 0px 0px 0px,
+        rgba(22, 163, 74, 0.1) 0px 3px 7px 0px,
+        rgba(40, 97, 230, 0.09) 0px 12px 12px 0px,
+        rgba(125, 157, 233, 0.05) 0px 27px 16px 0px,
+        rgba(40, 97, 230, 0.01) 0px 48px 19px 0px,
+        rgba(29, 228, 102, 0) 0px 0px 21px 0px,
+        rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(22, 163, 74, 0.3) 0px 8px 16px -8px;
+}
+
+.side-bar .title {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.title h1,
+p {
+    margin: 0;
+}
+
+.title h1 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.title p {
+    width: 10rem;
+    font-size: smaller;
+}
+
+.side-bar .img-container {
+    width: 90%rem;
+    object-fit: cover;
+    margin: auto;
+    margin-block: 2rem;
+}
+
+.img-container img {
+    width: 95%;
+    border-radius: 1rem;
+}
+
+.side-bar .details .email {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.side-bar .details .address {
+    font-size: 1rem;
+}
+
+.side-bar .details p {
+    margin-block: 1rem;
+    font-size: smaller;
+    color: var(--secondary-text);
+}
+.side-bar .socials {
+    display: flex;
+    margin-inline: auto;
+    width: 55%;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.socials a {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+.socials .icon {
+    border: solid 1px var(--border-light);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.socials .icon:hover {
+    box-shadow: 0 0 30px 3px var(--border-light);
+}
+
+.side-bar .btn-hire-me {
+    animation: slideUp 1s ease-out forwards;
+    width: 10rem;
+    padding-block: 0.7rem;
+    margin-block: 2rem 3rem;
+}
+
+.body {
+    padding: 1rem;
+}
+
+.intro {
+    margin-bottom: 20rem;
+}
+
+.section-header {
+    text-align: start;
+    animation: slideUp 1.5s ease-out forwards;
+    margin-top: 3rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    width: 100%;
+}
+
+.section-header .main-text {
+    color: var(--green-primary);
+}
+
+.stastics {
+    display: flex;
+    text-align: center;
+    animation: slideUp 1s ease-out forwards;
+    margin-top: 2rem;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.stastics .item h1 {
+    color: #16a34a;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.stastics .item p {
+    color: var(--secondary-text);
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    border: solid 1px var(--border-light);
+    border-radius: 2rem;
+    position: sticky;
+    top: 1rem;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    background-color: #1e293b;
+    z-index: 1;
+}
+.nav a {
+    color: var(--primary-text);
+}
+
+.nav a:hover {
+    color: var(--green-primary);
+}
+
+.section {
+    min-height: 100vh;
+    padding-top: 4rem;
+}
+
+.about-text {
+    color: var(--secondary-text);
+    width: 100%;
+    line-height: 2.2rem;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+.resume .item {
+    border-left: solid 1px;
+    padding-left: 2rem;
+    border-left-color: var(--border-light);
+    padding-block: 0.1rem;
+    margin-bottom: 2rem;
+}
+
+.resume .item h2,
+h5 {
+    margin-block: 0.8rem;
+}
+
+.resume .item .date {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+.resume .item .text {
+    color: var(--secondary-text);
+    font-size: 0.8rem;
+}
+
+.resume .item .header {
+    font-size: 1.2rem;
+}
+
+.show-case {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.show-case .item {
+    border: solid 1px var(--border-light);
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    box-shadow: rgba(40, 97, 230, 0.1) 0px 0px 0px 0px,
+        rgba(22, 163, 74, 0.1) 0px 3px 7px 0px,
+        rgba(40, 97, 230, 0.09) 0px 12px 12px 0px,
+        rgba(125, 157, 233, 0.05) 0px 27px 16px 0px,
+        rgba(40, 97, 230, 0.01) 0px 48px 19px 0px,
+        rgba(29, 228, 102, 0) 0px 74px 21px 0px,
+        rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(22, 163, 74, 0.3) 0px 8px 16px -8px,
+        0px 0px 10px 1px var(--green-primary);
+
+    /* box-shadow: rgba(32, 122, 47, 0.35) 0px -50px 36px -28px inset; */
+}
+
+.show-case .item:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+.show-case .item h1 {
+    margin: 0;
+    font-size: 1rem;
+}
+.show-case .item .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.show-case .item img {
+    filter: invert(100%);
+    width: 3rem;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0;
+}
+
+.form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group .input {
+    background: none;
+    border: none;
+    outline: none;
+    padding-bottom: 1rem;
+    margin-block: 1.5rem 3rem;
+    color: var(--primary-text);
+    border-bottom: 1px solid rgb(50, 49, 49);
+    transition: border-color 0.5s ease-in-out;
+}
+
+.form-group .label {
+    font-size: 0.7rem;
+}
+
+.form-group .input:focus {
+    border-bottom: solid 1px whitesmoke;
+}
+
+.text-area {
+    flex: 0 0 100%;
+}
+
+.btn-message-me {
+    padding-inline: 4rem;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    .stastics {
+        margin-top: 2rem;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .stastics .item h1 {
+        font-size: 2rem;
+    }
+
+    * svg {
+        width: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    * svg {
+        width: 3rem;
+    }
+    .main {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .nav {
+        position: sticky;
+        top: 30%;
+        left: 95%;
+        height: 20rem;
+        flex-direction: column;
+        box-shadow: rgba(40, 97, 230, 0.1) 0px 0px 0px 0px,
+            rgba(22, 163, 74, 0.1) 0px 3px 7px 0px,
+            rgba(40, 97, 230, 0.09) 0px 12px 12px 0px,
+            rgba(125, 157, 233, 0.05) 0px 27px 16px 0px,
+            rgba(40, 97, 230, 0.01) 0px 48px 19px 0px,
+            rgba(29, 228, 102, 0) 0px 74px 21px 0px,
+            rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+            rgba(22, 163, 74, 0.3) 0px 8px 16px -8px;
+    }
+    .side-bar {
+        position: sticky;
+        height: 70vh;
+        top: 2rem;
+        width: 25%;
+        padding-inline: 0.6rem;
+        margin-block: 0rem;
+    }
+
+    .side-bar .socials {
+        width: 90%;
+    }
+
+    .side-bar .details .email {
+        font-size: 1rem;
+    }
+
+    .side-bar .details .address {
+        font-size: 0.8rem;
+    }
+
+    .side-bar .btn-hire-me {
+        margin-block: 3rem 2rem;
+        width: 10rem;
+        margin-inline: auto;
+    }
+
+    .intro {
+        margin-top: 2.5rem;
+    }
+
+    .section {
+        min-height: 100vh;
+        padding-top: 4rem;
+    }
+
+    .section-header {
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+    .stastics {
+        margin-top: 10rem;
+        gap: 5rem;
+    }
+    .stastics .item h1 {
+        font-size: 3rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .about-text {
+        width: 80%;
+    }
+
+    .resume .item .header {
+        font-size: 1.6rem;
+    }
+    .form {
+        width: 80%;
+    }
+
+    .form-group .input {
+        font-size: larger;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .side-bar .btn-hire-me {
+        margin-block: 7rem 2rem;
+    }
+
+    .side-bar {
+        width: 25%;
+        padding-inline: 3rem;
+        height: 45rem;
+    }
+
+    .main {
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .body {
+        padding: 2rem;
+    }
+
+    .section-header {
+        font-size: 4rem;
+        width: 65%;
+        line-height: 6rem;
+    }
+
+    .stastics {
+        justify-content: start;
+    }
+
+    .stastics .item h1 {
+        font-size: 4rem;
+    }
+    .about-text {
+        width: 65%;
+    }
+
+    .img-container img {
+        width: 100%;
+    }
+    .side-bar .details .email {
+        font-size: 1.3rem;
+        margin: 0;
+    }
+    .show-case {
+        width: 80%;
+        margin-inline: auto;
+    }
+    .show-case .item {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .form {
+        flex-direction: row;
+    }
+    .form .form-group {
+        width: 45%;
+    }
+}
